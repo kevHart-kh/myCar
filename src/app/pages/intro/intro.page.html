@@ -1,0 +1,32 @@
+<ion-header>
+	<ion-toolbar>
+		<ion-title>intro</ion-title>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content>
+	<ion-slides class='slide-page' pager="true">
+		<ion-slide class="slide-two" (click)="ionViewWillLeave()">
+			<h1>Awesome Slide Content</h1>
+			<br>
+			<ion-img src='/assets/icon/favicon.png'>
+				<!-- src\assets\icon\favicon.png -->
+			</ion-img>
+			<p class="label-intro">
+				coba KEVIN HARTONO
+				<br>
+				<span>hopefully can help you</span>
+			</p>
+		</ion-slide>
+
+		<ion-slide class="slide-three">
+			<h1>TRY OUR BEST APPS</h1>
+			<br>
+			<div class="login" (click)="openLoginPage()">
+				<ion-icon name="log-in-sharp"></ion-icon>
+				<span> LOGIN</span>
+			</div>
+		</ion-slide>
+
+	</ion-slides>
+</ion-content>

@@ -1,0 +1,67 @@
+<ion-header>
+	<ion-toolbar>
+
+		<ion-buttons slot="start">
+			<ion-back-button></ion-back-button>
+		</ion-buttons>
+
+		<ion-title>Sign Up</ion-title>
+
+	</ion-toolbar>
+</ion-header>
+
+<ion-content>
+	<ion-list>
+		<div class="">
+			<ion-item>
+				<ion-label position="floating">Full Name </ion-label>
+				<ion-input type="text" [(ngModel)]="name"></ion-input>
+			</ion-item>
+
+			<ion-item>
+				<ion-label position="floating">Birth Date</ion-label>
+				<ion-datetime display-format="DD MMM YYYY" min="1900-01-01" max="2050-01-01" [(ngModel)]="birth_date">
+				</ion-datetime>
+			</ion-item>
+
+			<ion-item>
+				<ion-label position='floating'>Gender</ion-label>
+				<ion-select style="popover" [(ngModel)]="gender">
+					<ion-select-option value="f">Female</ion-select-option>
+					<ion-select-option value="m">Male</ion-select-option>
+				</ion-select>
+			</ion-item>
+
+			<ion-item>
+				<ion-label position="floating">E-Mail </ion-label>
+				<ion-input type="text" [(ngModel)]="email_address"></ion-input>
+			</ion-item>
+
+			<ion-item>
+				<ion-label position="floating">Username</ion-label>
+				<ion-input type="text" [(ngModel)]="username"></ion-input>
+			</ion-item>
+
+			<ion-item>
+				<ion-label position="floating">Password</ion-label>
+				<ion-input type="Password" [(ngModel)]="password"></ion-input>
+			</ion-item>
+
+			<ion-item>
+				<ion-label position="floating">Confirm Password</ion-label>
+				<ion-input type="Password" [(ngModel)]="confirm_password"></ion-input>
+			</ion-item>
+
+			<ion-button (click)="trySignUp()" class="ion-no-padding" expand="full" fill="clear" color="success"
+				shape="round" [disabled]="disabledButton">
+				Sign Up
+			</ion-button>
+		</div>
+
+	</ion-list>
+
+	<p class=" ion-no-padding register ion-text-center">
+		Already Have An Account? <br>
+		<span [routerLink]="['/login']">Login Now!</span>
+	</p>
+</ion-content>

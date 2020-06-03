@@ -1,0 +1,38 @@
+ion-slide{
+	height: 100vh;
+	flex-direction: column;
+}
+
+ion-img{
+	max-width: 50vw;
+	max-height: 50vh;
+	overflow: hidden;
+}
+
+.label-intro{
+	--var: 10px;
+	margin-left : var(--var);
+	margin-right : var(--var);
+}
+
+.label-intro span{
+	font-size: 14px;
+}
+
+.slide-one{
+	background:white;
+	color: #333;
+}
+.slide-two{
+	background:white;
+	color: #333;
+}
+
+.slide-three{
+	background:white;
+	color: #333;
+}
+
+.login span{
+	color: var(--ion-color-primary);
+}
