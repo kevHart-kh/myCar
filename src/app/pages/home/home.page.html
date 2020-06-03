@@ -2,6 +2,14 @@
   <ion-toolbar>
     <ion-title>home</ion-title>
 
+    <ion-buttons slot="start">
+      <ion-menu-toggle>
+        <ion-button expand="full" fill="clear" shape="round">
+          <ion-icon name="grid-outline"></ion-icon>
+        </ion-button>
+      </ion-menu-toggle>
+    </ion-buttons>
+
     <ion-buttons slot="end">
       <ion-button (click)="logOut()">
         <ion-icon slot="end" name="log-out"></ion-icon>

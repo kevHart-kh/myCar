@@ -5,6 +5,8 @@ import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { Storage } from '@ionic/storage';
 
+import { GlobalService } from "./services/global.service";
+
 @Component({
 	selector: 'app-root',
 	templateUrl: 'app.component.html',
@@ -16,7 +18,8 @@ export class AppComponent {
 		private splashScreen: SplashScreen,
 		private storage: Storage,
 		private navCtrl: NavController,
-		private statusBar: StatusBar
+		private statusBar: StatusBar,
+		private globalVar: GlobalService
 	) {
 		this.initializeApp();
 	}
@@ -29,11 +32,12 @@ export class AppComponent {
 		//this.storage.clear();
 		this.storage.get('SESSION').then((val) => {
 			if (val == null) {
-				// this.navCtrl.navigateRoot(['/login']);
-				this.navCtrl.navigateRoot(['/login']);
+				var url = this.globalVar.url_landing;
+				this.navCtrl.navigateRoot(url);
 			}
 			else {
-				this.navCtrl.navigateRoot(['/home']);
+				var url = this.globalVar.url_Home;
+				this.navCtrl.navigateRoot(url);
 			}
 		});
 

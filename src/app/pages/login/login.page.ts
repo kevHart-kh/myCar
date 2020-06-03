@@ -5,6 +5,8 @@ import { AccessProviders } from "../../providers/access-providers";
 import { LoadingController, ToastController, AlertController, NavController } from '@ionic/angular';
 import { Storage } from "@ionic/storage";
 
+import { GlobalService } from "../../services/global.service";
+
 @Component({
 	selector: 'app-login',
 	templateUrl: './login.page.html',
@@ -21,7 +23,8 @@ export class LoginPage implements OnInit {
 		private toastCtrl: ToastController,
 		private alertCtrl: AlertController,
 		private navCtrl: NavController,
-		private storage: Storage
+		private storage: Storage,
+		private globalVar: GlobalService
 	) { }
 
 	ngOnInit() {
@@ -59,7 +62,7 @@ export class LoginPage implements OnInit {
 
 						this.storage.set('SESSION', res.data_user);
 						//console.log(this.storage.get('SESSION'));
-						this.navCtrl.navigateRoot(['home']);
+						this.navCtrl.navigateRoot(this.globalVar.url_Home);
 					} else {
 						loading.dismiss();
 						this.presentToast(res.msg);

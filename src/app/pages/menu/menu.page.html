@@ -1,0 +1,39 @@
+<ion-split-pane contentId="menu-content" when="xs" [disabled]="true">
+  <ion-menu contentId="menu-content" menuId="menu-content" side="start" type="overlay">
+
+
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>MENU</ion-title>
+      </ion-toolbar>
+    </ion-header>
+
+    <ion-content>
+      <ion-list>
+        <ion-item-divider>
+          <ion-label>Car Detail</ion-label>
+        </ion-item-divider>
+        <ion-menu-toggle autoHide='true' *ngFor="let p of pages">
+          <ion-item [routerLink]="p.url" routerDirectioin='root' [class.active-item]='selectedPath === p.url'>
+            <ion-icon [name]="p.icon" slot="start"></ion-icon>
+            {{p.title}}
+          </ion-item>
+        </ion-menu-toggle>
+
+        <ion-item-divider class="ion-margin-top">
+          <ion-label>Account</ion-label>
+        </ion-item-divider>
+        <ion-menu-toggle autoHide='true'>
+          <ion-item [routerLink]="p.url" routerDirectioin='root' autoHide='true'
+            [class.active-item]='selectedPath === p.url' *ngFor="let p of pagesAccount">
+            <ion-icon [name]="p.icon" slot="start"></ion-icon>
+            {{p.title}}
+          </ion-item>
+        </ion-menu-toggle>
+
+      </ion-list>
+    </ion-content>
+
+  </ion-menu>
+  <ion-router-outlet id="menu-content"></ion-router-outlet>
+</ion-split-pane>
