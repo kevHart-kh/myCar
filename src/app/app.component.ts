@@ -26,11 +26,11 @@ export class AppComponent {
 			this.statusBar.styleDefault();
 			this.splashScreen.hide();
 		});
-
+		//this.storage.clear();
 		this.storage.get('SESSION').then((val) => {
 			if (val == null) {
 				// this.navCtrl.navigateRoot(['/login']);
-				this.navCtrl.navigateRoot(['/registration']);
+				this.navCtrl.navigateRoot(['/login']);
 			}
 			else {
 				this.navCtrl.navigateRoot(['/home']);

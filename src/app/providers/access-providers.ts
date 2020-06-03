@@ -20,7 +20,7 @@ export class AccessProviders {
 			headers: headers
 		}
 
-		return this.http.post(this.server + file_name, JSON.stringify(data), option).timeout(59000).map(res => res);
+		return this.http.post(this.server + file_name, JSON.stringify(data), option).timeout(5000).map(res => res);
 	}
 
 }
