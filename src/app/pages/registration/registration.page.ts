@@ -85,7 +85,7 @@ export class RegistrationPage implements OnInit {
 						this.presentToast(res.msg);
 					}
 				}, (err) => {
-					//console.log(err);
+					console.log(err);
 					loading.dismiss();
 					this.disabledButton = false;
 					this.presentAlert('Timeout');

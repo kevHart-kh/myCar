@@ -6,7 +6,7 @@ import { Storage } from "@ionic/storage";
 })
 export class GlobalService {
 
-  public url_landing = ['/login'];
+  public url_landing = ['/intro'];
   public url_Home = ['/menu/home'];
 
   public data_user: any;

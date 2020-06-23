@@ -1,32 +1,66 @@
 <ion-header>
 	<ion-toolbar>
-		<ion-title>intro</ion-title>
+		<ion-buttons slot="start">
+			<ion-button fill="clear" color="medium" slot="fixed" [routerLink]="['/login']"
+				routerLinkActive="router-link-active">
+				skip
+			</ion-button>
+		</ion-buttons>
+
+		<ion-buttons slot="end">
+			<ion-button fill="clear" color="medium" horizontal="start" vertical="bottom" slot="fixed">
+				continue
+				<ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
+			</ion-button>
+		</ion-buttons>
 	</ion-toolbar>
 </ion-header>
 
-<ion-content>
-	<ion-slides class='slide-page' pager="true">
-		<ion-slide class="slide-two" (click)="ionViewWillLeave()">
-			<h1>Awesome Slide Content</h1>
-			<br>
-			<ion-img src='/assets/icon/favicon.png'>
-				<!-- src\assets\icon\favicon.png -->
-			</ion-img>
-			<p class="label-intro">
-				coba KEVIN HARTONO
-				<br>
-				<span>hopefully can help you</span>
-			</p>
+<ion-content class="ion-padding">
+	<ion-slides pager="true" vertical="bottom">
+		<ion-slide class="slide-one">
+			<h2>Welcome</h2>
+
+			<ion-img src="/assets/images/mobilku.jpg"></ion-img>
+
+			<p>mobilku adalah aplikasi yang akan membantu hidup mobil anda lebih baik.</p>
+
+			<ion-buttons slot="start" vertical='bottom'>
+				<ion-button fill="clear" horizontal="start" vertical="bottom" slot="fixed">
+					SKIP
+				</ion-button>
+
+				<ion-button fill="clear" horizontal="start" vertical="bottom" slot="fixed">
+					CONTINUE
+					<ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
+				</ion-button>
+			</ion-buttons>
+
 		</ion-slide>
 
-		<ion-slide class="slide-three">
-			<h1>TRY OUR BEST APPS</h1>
-			<br>
-			<div class="login" (click)="openLoginPage()">
-				<ion-icon name="log-in-sharp"></ion-icon>
-				<span> LOGIN</span>
+		<ion-slide>
+			<div class="slide">
+				<img src="/assets/images/mobilku.jpg">
+				<h1>Awesome Slide Content</h1>
+
+				<p>mobilku adalah aplikasi yang akan membantu hidup mobil anda lebih baik.</p>
+
+				<ion-button fill="clear" horizontal="start" vertical="bottom" slot="fixed" (click)="login()">CONTINUE<ion-icon slot="end"
+						name="chevron-forward-outline" ></ion-icon>
+				</ion-button>
 			</div>
 		</ion-slide>
 
+		<!-- <ion-slide class="slide-three">
+			<div class="login" (click)="openLoginPage()">
+				<img src="/assets/icon/mobilku.jpg">
+				<h2>Welcome</h2>
+				<p>mobilku adalah aplikasi yang akan membantu hidup mobil anda lebih baik.</p>
+				<ion-button fill="clear" horizontal="start" vertical="bottom" slot="fixed" expand="block">
+					<ion-icon name="log-in-sharp"></ion-icon>
+					<span> LOGIN</span></ion-icon>
+				</ion-button>
+			</div>
+		</ion-slide> -->
 	</ion-slides>
 </ion-content>

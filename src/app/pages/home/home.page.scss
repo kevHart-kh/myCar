@@ -1,0 +1,16 @@
+ion-card{
+	--color:var(--ion-color-light);
+	--background:var(--ion-color-primary);
+}
+
+.title-item{
+	text-transform: uppercase;
+}
+
+.harga{
+	float: right;	
+}
+
+.harga::before{
+	content: 'Rp. ';
+}
