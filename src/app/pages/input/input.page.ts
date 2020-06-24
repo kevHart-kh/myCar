@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ToastController, LoadingController, AlertController } from '@ionic/angular';
 import { AccessProviders } from 'src/app/providers/access-providers';
+import { GlobalService } from "../../services/global.service";
 
 @Component({
 	selector: 'app-input',
@@ -15,7 +16,8 @@ export class InputPage implements OnInit {
 		private toastCtrl: ToastController,
 		private loadingCtrl: LoadingController,
 		private alertCtrl: AlertController,
-		private accessProv: AccessProviders
+		private accessProv: AccessProviders,
+		private globvar:GlobalService
 	) { }
 
 	name: string = '';
@@ -43,6 +45,7 @@ export class InputPage implements OnInit {
 			return new Promise(resolve => {
 				let data = {
 					menu: 'add_car',
+					id: this.globvar.data_user.id,
 					name: this.name,
 					lisance_plate: this.lisance_plate,
 					year: this.year
@@ -60,7 +63,7 @@ export class InputPage implements OnInit {
 						this.presentToast(res.msg);
 					}
 				}, (err) => {
-					console.log(err);
+					// console.log(err);
 					loading.dismiss();
 					this.disabledButton = false;
 					this.presentAlert('Timeout');
@@ -107,6 +110,9 @@ export class InputPage implements OnInit {
 
 		alert.present();
 	}
+
+	////////////////////////////////
+
 
 
 

@@ -6,7 +6,7 @@ import 'rxjs/add/operator/timeout';
 @Injectable()
 
 export class AccessProviders {
-	server: string = 'http://localhost/server-ionic/api/';
+	server: string = 'http://gostruggle.com/ionic/api/';
 
 	constructor(
 		public http: HttpClient

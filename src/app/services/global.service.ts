@@ -11,7 +11,6 @@ export class GlobalService {
 
   public data_user: any;
 
-
   constructor(
     private storage: Storage
   ) { }
