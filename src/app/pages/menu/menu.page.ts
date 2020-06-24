@@ -12,10 +12,11 @@ export class MenuPage implements OnInit {
 			title: 'home',
 			icon: 'car-sport-sharp',
 			url: '/menu/home'
-		}, {
-			title: 'input',
+		},
+		{
+			title: 'car',
 			icon: 'car-sport-sharp',
-			url: '/menu/input'
+			url: '/menu/car'
 		},
 	];
 

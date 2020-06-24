@@ -17,8 +17,8 @@ const routes: Routes = [
 				loadChildren: () => import('../profile/profile.module').then(m => m.ProfilePageModule)
 			},
 			{
-				path: 'input',
-				loadChildren: () => import('../input/input.module').then(m => m.InputPageModule)
+				path: 'car',
+				loadChildren: () => import('../car/car.module').then(m => m.CarPageModule)
 			},
 		]
 	}
